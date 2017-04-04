@@ -1,0 +1,8 @@
+<nav>
+  <ul>
+    <a href="/">home</a>
+    {{#each collections.pages}}
+      <a href="/{{this.path}}">{{this.title}}</a>
+    {{/each}}
+  </ul>
+</nav>
