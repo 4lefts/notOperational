@@ -9,6 +9,7 @@ const permalinks = require('metalsmith-permalinks')
 const collections = require('metalsmith-collections')
 const ignore = require('metalsmith-ignore')
 const dateFormatter = require('metalsmith-date-formatter')
+const sass = require('metalsmith-sass')
 
 //for building css
 // const sass = require('gulp-sass')
@@ -30,6 +31,12 @@ gulp.task('buildSite', () => {
     .source('./src')
     .destination('./build')
     .clean(true)
+    .use(sass({
+      outputDir: function(originalPath){
+        return originalPath.replace('sass', 'css')
+      },
+      outputStyle: 'expanded',
+    }))
     .use(collections({
       cards: {
         pattern: 'cards/*.md',
@@ -44,12 +51,12 @@ gulp.task('buildSite', () => {
         reverse: true,
       },
     }))
-    .use(ignore(['cards/*']))
+    .use(ignore(['cards/*', 'sass/*']))
     .use(dateFormatter({
       dates: [
         {
           key: 'publishDate',
-          format: 'dddd Do MMMM YYYY',
+          format: 'DD-MM-YYYY',
         },
       ]
     }))

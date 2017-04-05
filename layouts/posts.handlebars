@@ -2,10 +2,8 @@
   {{> nav}}
     <h1>{{{title}}}</h1>
     {{#each collections.posts}}
-      <a href="/{{this.path}}">
-        <h3>
-          <span>{{this.title}}</span><span>{{this.publishDate}}</span>
-        </h3>
+      <a href="/{{this.path}}" class="post-link">
+        <span class="post-link-title">{{this.title}}</span><span class="post-link-date">({{this.publishDate}})</span>
       </a>
     {{/each}}
   {{> bottom}}

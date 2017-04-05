@@ -2,4 +2,4 @@
 title: Process P
 url: processp
 ---
-Simple _0_ style browser-based drum machine.
+Simple x0x-style browser-based drum machine.

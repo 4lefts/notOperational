@@ -1,0 +1,109 @@
+@import 'normalize';
+
+$gutter: 10px;
+$text-colour: rgba(0, 0, 0, 0.87);
+$theme-colour: #FF5722;
+
+body {
+  font-family: 'Pontano Sans', helvetica, arial, sans-serif;
+  font-size: 16px;
+  min-height: 100%;
+  color: $text-colour;
+}
+
+h1, h2, h3, h4, h5, h6, nav, .card {
+  font-weight: 400;
+}
+
+.container{
+  box-sizing: border-box;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 $gutter;
+}
+
+a{
+  color: $theme-colour;
+  transition: color 0.3s ease;
+  &:hover{
+    color: $text-colour;
+  }
+}
+
+nav{
+  text-align: right;
+  margin: 0 auto;
+  padding-bottom: 1em;
+  a{
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: $text-colour;
+    transition: color 0.3s ease;
+    border-right: 1px solid $text-colour;
+    &:last-child{
+      border-right: none;
+    }
+    &:hover{
+      color: $theme-colour;
+    }
+  }
+}
+
+.logo{
+  h1{
+    font-size: 15vmin;
+    margin: 0;
+    padding: 0.4em;
+    span{
+      color: $theme-colour;
+    }
+  }
+}
+
+.card{
+  box-sizing: border-box;
+  margin-bottom: $gutter;
+  background-color: #222;
+  transition: background-color 0.3s ease;
+  color: white;
+  padding: $gutter;
+  &:hover{
+    background-color: $theme-colour;
+    }
+  a{
+    color: white;
+    text-decoration: none;
+    h2{
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.post-link{
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 1em auto 2em auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid $text-colour;
+  .post-link-title {
+    font-size: 1.8em;
+    margin-right: $gutter;
+  }
+  .post-link-date {
+    font-size: 1.2em;
+  }
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  line-height: 50px;
+}
