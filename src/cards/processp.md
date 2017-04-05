@@ -1,5 +1,5 @@
 ---
-title: process p
+title: Process P
 url: processp
 ---
-simple _0_ style browser-based drum machine.
+Simple _0_ style browser-based drum machine.

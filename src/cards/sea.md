@@ -1,5 +1,5 @@
 ---
-title: sea
+title: Sea
 url: sea
 ---
-additive drone synthesizer. click to start, leave to stand.
+Additive drone synthesizer. click to start, leave to stand.

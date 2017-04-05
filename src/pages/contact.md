@@ -1,7 +1,23 @@
 ---
-title: contact
+title: Contact
 layout: contact.handlebars
 ---
-Interdum vitae nam interdum blandit, morbi magna, condimentum interdum adipiscing, blandit aenean integer nec. Lacus sint quis integer gravida. Ut odio in nullam porttitor vitae a, vitae porttitor vestibulum, tincidunt eu nibh mauris quam lobortis, euismod nulla nullam ex integer, non dolor imperdiet pede risus. Et dui ut ante risus quis, torquent consectetuer, tristique tempor dolor luctus vehicula magna amet. Est lectus morbi, a et sed.
+## Get in touch:
 
-Rutrum sociis eget nostra sed neque. Commodo wisi dui. Pede sed pellentesque magnis nulla dis non, adipiscing vehicula tellus eu mauris auctor, sit elementum mi malesuada, justo iusto fusce aenean commodo velit nulla. Nec in sed ullamcorper non urna aptent, pede duis tellus praesentium quisque, in rutrum amet risus lectus, dui vitae in velit vitae. Nulla sed porta quisque, scelerisque dui. Non elit mi.
+Twitter: [@mr_s_ball]
+
+Github: https://github.com/4lefts
+
+## About
+
+My name is Stephen. I live in Devon, in the UK. I make things with computers, using [Max/MSP], [CSound], javascript, [p5js], [Processing], and with guitars.
+
+(This site was built with the excellent static site generator [metalsmith].)
+
+[stephen@notoperational.com]: mailto:stephen@notoperational.metalsmith
+[@mr_s_ball]: http://twitter.com/mr_s_ball
+[metalsmith]: http://www.metalsmith.io
+[Max/MSP]: https://cycling74.com
+[CSound]: https://csounds.com
+[p5js]: https://p5js.org
+[Processing]: https://processing.org

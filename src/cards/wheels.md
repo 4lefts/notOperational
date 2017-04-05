@@ -1,5 +1,5 @@
 ---
-title: wheels
-url: wheels
+title: Wheels
+url: wheels-v2
 ---
-a meditative web app that plays cyclical sine waves. nothing like a tibetan singing bowl.
+Meditative web app that plays cyclical sine waves. Nothing like a Tibetan singing bowl.

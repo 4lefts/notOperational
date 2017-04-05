@@ -7,6 +7,7 @@ const layouts = require('metalsmith-layouts')
 const permalinks = require('metalsmith-permalinks')
 const collections = require('metalsmith-collections')
 const ignore = require('metalsmith-ignore')
+const dateFormatter = require('metalsmith-date-formatter')
 
 //for building css
 // const sass = require('gulp-sass')
@@ -19,9 +20,9 @@ gulp.task('buildSite', () => {
   return metalsmith(__dirname)
     .metadata({
       site: {
-        title: 'not operational',
+        title: 'Not Operational',
         url: 'notoperational.com',
-        author: 'stephen ball',
+        author: 'Stephen Ball',
         year: y,
       },
     })
@@ -31,12 +32,26 @@ gulp.task('buildSite', () => {
     .use(collections({
       cards: {
         pattern: 'cards/*.md',
+        sortBy: 'title',
       },
       pages: {
         pattern: 'pages/*.md',
       },
+      posts: {
+        pattern: 'posts/*.md',
+        sortBy: 'publishDate',
+        reverse: true,
+      },
     }))
     .use(ignore(['cards/*']))
+    .use(dateFormatter({
+      dates: [
+        {
+          key: 'publishDate',
+          format: 'dddd Do MMMM YYYY',
+        },
+      ]
+    }))
     .use(markdown({
       gfm: true,
       smartypants: true,
@@ -45,6 +60,12 @@ gulp.task('buildSite', () => {
     .use(permalinks({
       pattern: ':title',
       relative: false,
+      linksets:[
+        {
+          match: { collection: 'posts'},
+          pattern: 'posts/:title',
+        },
+      ],
     }))
     .use(layouts({
       engine: 'handlebars',
