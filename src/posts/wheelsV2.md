@@ -3,7 +3,7 @@ title: Wheels V2
 publishDate: 2016-11-24
 layout: post.handlebars
 ---
-Another go at creating a meditative web app that plays cyclical sine waves. Currently plays a major scale centered around a3 (220hz). It's [here](http://notoperational.com/wheels-v2).
+Another go at creating a meditative web app that plays cyclical sine waves. Currently plays a major scale centered around a3 (220hz). It's [here](http://notoperational.com/wheelsV2).
 
 It uses [pythagorean tuning](https://en.wikipedia.org/wiki/Pythagorean_tuning) to create the scale.
 

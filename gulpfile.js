@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const browsersync = require('browser-sync').create()
 
 //metalsmith and plugins
 const metalsmith = require('metalsmith')
@@ -76,4 +77,18 @@ gulp.task('buildSite', () => {
     })
 })
 
-gulp.task('default', ['buildSite'])
+gulp.task('serve', () => {
+  browsersync.init({
+    server: {
+      baseDir: 'build',
+    },
+  })
+})
+
+gulp.task('refresh', ['buildSite'], () => {
+  return browsersync.reload()
+})
+
+gulp.task('watch', () => gulp.watch(['src/**', 'layouts/**', 'partials/**'], ['refresh']))
+
+gulp.task('default', ['buildSite', 'serve', 'watch'])
