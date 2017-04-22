@@ -7,7 +7,7 @@ Another go at creating a meditative web app that plays cyclical sine waves. Curr
 
 It uses [pythagorean tuning](https://en.wikipedia.org/wiki/Pythagorean_tuning) to create the scale.
 
-##To Dos
+## To Dos:
 * Add more scales, and a selection input to choose between them. The number of nodes will need to update.
 * Better visualisation - adding in more to the analysis of the playing sound.
 * Improve synthesis to add in harmonics. See samples of Tibetan singing bowls for ideas.

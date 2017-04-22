@@ -6,16 +6,28 @@ $theme-colour: #FF5722;
 
 body {
   font-family: 'Pontano Sans', helvetica, arial, sans-serif;
-  font-size: 16px;
-  min-height: 100%;
+  font-size: 18px;
+  height: 100%;
   color: $text-colour;
+}
+
+p{
+  line-height: 1.4em;
+}
+img{
+  max-width: 100%;
+  height: auto;
 }
 
 h1, h2, h3, h4, h5, h6, nav, .card {
   font-weight: 400;
 }
 
-.container{
+.wrapper{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-sizing: border-box;
   max-width: 640px;
   margin: 0 auto;
@@ -35,8 +47,9 @@ nav{
   margin: 0 auto;
   padding-bottom: 1em;
   a{
+    box-sizing: border-box;
     display: inline-block;
-    width: 60px;
+    width: 75px;
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -91,19 +104,21 @@ nav{
   margin: 1em auto 2em auto;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
   border-bottom: 1px solid $text-colour;
   .post-link-title {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-right: $gutter;
   }
   .post-link-date {
-    font-size: 1.2em;
+    font-size: 1em;
+    white-space: nowrap;
   }
 }
 
 footer{
-  position: absolute;
-  bottom: 0;
+  box-sizing: border-box;
+  border-top: 1px solid black;
+  width: 100%;
   line-height: 50px;
 }

@@ -1,6 +1,7 @@
   {{> top}}
   {{> nav}}
     <h1>{{{title}}}</h1>
+    {{{contents}}}
     {{#each collections.posts}}
       <a href="/{{this.path}}" class="post-link">
         <span class="post-link-title">{{this.title}}</span><span class="post-link-date">({{this.publishDate}})</span>

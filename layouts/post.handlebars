@@ -1,11 +1,10 @@
   {{> top}}
   {{> nav}}
     <h1>{{{title}}}</h1>
-    <h4>{{{publishDate}}}</h4>
     {{#if author}}
-      <h3>by {{{author}}}</h3>
+      <h4>By {{{author}}}, {{{publishDate}}}</h4>
     {{else}}
-      <h3>by {{{site.author}}}</h3>
+      <h4>By {{{site.author}}}, {{{publishDate}}}</h4>
     {{/if}}
     {{{contents}}}
   {{> bottom}}
