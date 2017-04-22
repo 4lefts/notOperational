@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 const browsersync = require('browser-sync').create()
+const ghPages = require('gulp-gh-pages')
 
 //metalsmith and plugins
 const metalsmith = require('metalsmith')
@@ -56,7 +57,7 @@ gulp.task('buildSite', () => {
       dates: [
         {
           key: 'publishDate',
-          format: 'DD-MM-YYYY',
+          format: 'DD MMMM YYYY',
         },
       ]
     }))
@@ -99,3 +100,12 @@ gulp.task('refresh', ['buildSite'], () => {
 gulp.task('watch', () => gulp.watch(['src/**', 'layouts/**', 'partials/**'], ['refresh']))
 
 gulp.task('default', ['buildSite', 'serve', 'watch'])
+
+
+//deploy to github pages - not part of default task
+//excellent walkthrough of how to set up github pages and how to use this at:
+//http://charliegleason.com/articles/deploying-to-github-pages-with-gulp
+gulp.task('deploy', ['buildSite'], () => {
+	return gulp.src('./public/**/*')
+				.pipe(ghPages())
+})
