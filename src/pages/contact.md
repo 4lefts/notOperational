@@ -10,7 +10,9 @@ Github: https://github.com/4lefts
 
 ## About
 
-My name is Stephen. I live in Devon, in the UK. I make things with computers, using [Max/MSP], [CSound], javascript, [p5js], [tonejs], [Processing], and with guitars.
+My name is Stephen. I live in Devon, in the UK. I like making things with computers, using [Max/MSP], [CSound], javascript, [p5js], [tonejs], [Processing], and with guitars.
+
+![Me](/images/contact.JPG)
 
 (This site was built with the excellent static site generator [metalsmith].)
 

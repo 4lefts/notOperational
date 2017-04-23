@@ -66,14 +66,26 @@ nav{
   }
 }
 
-.logo{
+#logo{
+  position: relative;
+  height: 240px;
+  display: flex;
+  align-items: center;
   h1{
+    line-height: 100%;
     font-size: 15vmin;
     margin: 0;
     padding: 0.4em;
+    z-index: 100;
     span{
       color: $theme-colour;
     }
+  }
+  canvas{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
   }
 }
 

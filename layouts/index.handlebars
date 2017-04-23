@@ -1,10 +1,19 @@
   {{> top}}
   {{> nav}}
-    <div class="logo">
+
+    <div id="logo">
 			<h1><span>&not;</span>Op</h1>
 		</div>
+    <!-- p5js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.min.js"></script>
+    <!-- p5 dom -->
+    <script type="text/javascript" src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.min.js></script>
+    <!-- drawing -->
+    <script type="text/javascript" src="/js/logo.js"></script>
+
     {{{contents}}}
     {{#each collections.cards}}
       {{> card}}
     {{/each}}
+
   {{> bottom}}
