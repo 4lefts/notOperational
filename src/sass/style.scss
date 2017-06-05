@@ -66,12 +66,13 @@ nav{
   }
 }
 
-#logo{
+#orbs{
   position: relative;
   height: 240px;
   display: flex;
   align-items: center;
-  h1{
+  h1#logo{
+    color: #222;
     line-height: 100%;
     font-size: 15vmin;
     margin: 0;
@@ -82,12 +83,15 @@ nav{
     }
   }
   canvas{
+    z-index: -1;
     position: absolute;
     top: 0;
-    z-index: -1;
     overflow: hidden;
   }
 }
+
+
+
 
 .card{
   box-sizing: border-box;
