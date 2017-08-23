@@ -51,7 +51,6 @@ Orb.prototype.render = function(){
   pop()
 }
 
-
 Orb.prototype.checkDist = function(orbs){
   this.dists = orbs.map((orb) => {
       return this.loc.dist(orb.loc) < this.r * 2 ? orb.loc : false
